@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: alfatah-echo-service
+  namespace: alfatah-eks-activity
+  labels:
+    app: echo-app
+spec:
+  type: ClusterIP
+  selector:
+    app: echo-app
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 5678
