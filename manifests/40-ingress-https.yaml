@@ -5,8 +5,13 @@ metadata:
   namespace: alfatah-eks-activity
   annotations:
     external-dns.alpha.kubernetes.io/hostname: "alfatah-echoapp.sctp-sandbox.com"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - "alfatah-echoapp.sctp-sandbox.com"
+      secretName: alfatah-echoapp-tls
   rules:
     - host: "alfatah-echoapp.sctp-sandbox.com"
       http:

@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ExternalDNSChangeRecords",
+      "Effect": "Allow",
+      "Action": ["route53:ChangeResourceRecordSets"],
+      "Resource": ["arn:aws:route53:::hostedzone/Z00541411T1NGPV97B5C0"]
+    },
+    {
+      "Sid": "ExternalDNSListZones",
+      "Effect": "Allow",
+      "Action": ["route53:ListHostedZones", "route53:ListResourceRecordSets"],
+      "Resource": ["*"]
+    }
+  ]
+}
