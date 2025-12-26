@@ -65,8 +65,3 @@ TLS certificates are automatically issued and managed by **cert-manager** using 
 - Basic understanding of Kubernetes concepts
 
 ---
-
-## Status
-🟢 **Phase 0 complete**
-
-Next: Phase 1 – EKS Connectivity & Namespace Isolation
